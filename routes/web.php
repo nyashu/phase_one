@@ -3,7 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EmailVerificationController;
-use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use App\Http\Controllers\TrashController; 
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +41,12 @@ Route::group(["middleware" => ['auth']], function () {
         Route::get('/change-password/{id}', [AuthController::class, 'change_password'])->name('change_password');
         Route::post('/change-password-check/{id}', [AuthController::class, 'change_password_check'])->name('password_check');
         Route::get('/welcome', [AuthController::class, 'welcome'])->name('welcome');
+
+        Route::get('/trash', [TrashController::class, 'index'])->name('trash');
+        Route::get('/trash/delete/{id}', [TrashController::class, 'delete'])->name('delete_trash');
+        Route::get('/trash/restore/{id}', [TrashController::class, 'restore'])->name('restore');
+
+
     });
 
 });

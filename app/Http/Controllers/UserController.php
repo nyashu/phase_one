@@ -50,6 +50,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::find($id)->delete();
-        return redirect('/details')->with('success', "User detail has been deleted !!!");
+        return redirect('/details')->with('success', "Moved to trash !!!");
     }
 }

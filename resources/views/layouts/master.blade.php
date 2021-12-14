@@ -39,6 +39,10 @@
                     </li>
 
                     <li class="nav-item mr-auto">
+                        <a class="nav-link" href="{{ route('trash') }}">Trash</a>
+                    </li>
+
+                    <li class="nav-item mr-auto">
                         <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                     </li>
 
@@ -84,6 +88,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
     </script>
 </body>
 

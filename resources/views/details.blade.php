@@ -8,6 +8,8 @@
         @if (session()->has('success'))
 
             <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
                 {{ session()->get('success') }}
             </div>
 
@@ -33,8 +35,9 @@
                     <td>
                         <div class="d-flex">
                             <a href="{{ route('edit', $details->id) }}" class="px-3"> <i
-                                    class="fas fa-user-edit"></i> </a>
-                            <a href="{{ route('delete', $details->id) }}"> <i class="far fa-trash-alt text-danger"></i></a>
+                                    class="fas fa-user-edit text-success"></i> </a>
+                            <a href="{{ route('delete', $details->id) }}" data-toggle="tooltip" data-placement="right"
+                                title="Move to trash"> <i class="far fa-trash-alt text-danger"></i></a>
                         </div>
                     </td>
                 </tr>
