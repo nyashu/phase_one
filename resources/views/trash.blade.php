@@ -40,6 +40,9 @@
 
             @endforeach
         </table>
+        <div class="container d-flex justify-content-center py-2">
+            {{ $trash->links() }}
+        </div>
     </div>
 
 

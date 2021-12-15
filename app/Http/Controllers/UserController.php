@@ -11,7 +11,8 @@ class UserController extends Controller
 
     public function index()
     {
-       $users_detail =  User::all();
+    //    $users_detail =  User::all();
+       $users_detail = User::orderBy('user_name')->simplePaginate(6);
 
         return view('details', compact('users_detail'));
     }

@@ -45,7 +45,12 @@
 
             @endforeach
         </table>
+        <div class="container d-flex justify-content-center py-2">
+            {{ $users_detail->links() }}
+        </div>
     </div>
+
+    
 
 
 @endsection

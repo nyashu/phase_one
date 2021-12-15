@@ -8,7 +8,7 @@ class TrashController extends Controller
 {
     public function index()
     {
-        $trash = User::onlyTrashed()->get();
+        $trash = User::onlyTrashed()->simplePaginate(7);
         return view('trash', compact('trash'));
     }
 
